@@ -33,7 +33,7 @@ def search_recent_tweets(username, tweet_count=5):
         print(f"Error fetching tweets: {e}")
         return None
 
-def write_to_json(data, filename='recent_tweets.json'):
+def write_to_json(data, filename='crawled_tweets.json'):
     try:
         with open(filename, 'w') as f:
             json.dump(data, f, indent=4)
