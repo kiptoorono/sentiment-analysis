@@ -17,11 +17,11 @@ def main():
         
         # Prepare the Actor input
         run_input = {
-            "handles": handles,  # List of Twitter handles from input
-            "tweetsDesired": tweets_desired,  # Number of tweets per user
-            "addUserInfo": True,  # Whether to add user info in the output
-            "startUrls": [],  # Optional: You can add specific start URLs if needed
-            "proxyConfig": {"useApifyProxy": True},  # Use Apify proxy
+            "handles": handles, 
+            "tweetsDesired": tweets_desired,  
+            "addUserInfo": True,  
+            "startUrls": [],  
+            "proxyConfig": {"useApifyProxy": True},  
         }
 
         # Run the Actor and wait for it to finish
@@ -57,7 +57,7 @@ def main():
                     # Write each tweet to the CSV file
                     writer.writerow([username, tweet_text, tweet_date, likes, retweets])
 
-            print("Tweets have been written to 'scraped_tweets.csv'.")
+            print("Tweets have been written to 'deScraped_tweets.csv'.")
         else:
             print(f"Actor run failed with status: {run['status']}")
 
